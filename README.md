@@ -9,6 +9,7 @@ Requirements
 
 * node.js
 * mongodb
-both should be in your PATH variable
 * grunt
 * grunt-cli
+
+nodejs and mongodb should be in your PATH variable
