@@ -2,27 +2,21 @@
 var express         = require("express");
 var router          = express.Router();
 var GeoLocation     = require("../models/geoJson");
+var config          = require("../config");
 // db setup
 var mongoose        = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/loci"); // connect to our database
+mongoose.connect("mongodb://" + config.db.url + ":" + config.db.port + "/" + config.db.name + ""); // connect to our database
 
-// ROUTES FOR OUR API
+// routes for our api
 // =============================================================================
 
 // middleware to use for all requests
 router.use(function(req, res, next) {
 	console.log("middleware call (do stuff like auth)");
-	next(); // make sure we go to the next routes and don't stop here
+	next(); // forward to the matching route
 });
 
-// test route to make sure everything is working
-router.get('/', function(req, res) {
-	res.json({ message: "root, it works but no logic here" });
-});
-
-// more routes for our API will happen here
-
-// on routes that end in /locations
+// routes that end in /locations
 // ----------------------------------------------------
 router.route("/locations")
 
@@ -54,7 +48,7 @@ router.route("/locations")
 	});
 
 
-// on routes that end in /locations/:location_id
+// routes that end in /locations/:location_id
 // ----------------------------------------------------
 router.route("/locations/:location_id")
 
@@ -69,7 +63,7 @@ router.route("/locations/:location_id")
 	// update the location with the matching location_id
 	.put(function(req, res) {
 
-		// use our bear model to find the bear we want
+		// use our location model to find the location we want
 		GeoLocation.findById(req.params.location_id, function(err, location) {
 
 			if (err)
@@ -80,7 +74,7 @@ router.route("/locations/:location_id")
 			location.loc.type           = req.body.type;
 			location.loc.coordinates    = [req.body.lng, req.body.lat];
 
-			// save the bear
+			// save the location
 			location.save(function(err) {
 				if (err)
 					res.send(err);
