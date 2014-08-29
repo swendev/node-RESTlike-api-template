@@ -7,8 +7,8 @@ for node.js and mongodb
 Requirements
 ------------
 
-*node.js
-*mongodb
+* node.js
+* mongodb
 both should be in your PATH variable
-*grunt
-*grunt-cli
+* grunt
+* grunt-cli
