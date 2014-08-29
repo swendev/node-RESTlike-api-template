@@ -18,7 +18,7 @@ To install grunt and grunt-cli just type in a terminal `npm install grunt-cli -g
 Installation
 ------------
 
-Open a cli in your node-RESTlike project folder and type in `npm install`.
+Open a terminal in your node-RESTlike project folder and type in `npm install`.
 Npm should download all neccessary node modules.
 
 Development
@@ -30,3 +30,5 @@ There are 4 grunt tasks:
 2. 2-server (starts the node-RESTlike server.js with nodemon and lints all js files on change)
 3. all (combines 1-db, 2-server)
 4. build (builds your node-RESTlike module and puts it in a folder called dist)
+
+To start a grunt task open a terminal in your node-RESTlike project folder and type in `grunt <task-name>`. 
