@@ -5,10 +5,10 @@
 	"author": "Swen Gorschewski <swen@pixelforyou.de>",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/swendev/mean-stack"
+		"url": "https://github.com/swendev/node-RESTlike"
 	},
 	"bugs": {
-		"url": "https://github.com/swendev/mean-stack/issues"
+		"url": "https://github.com/swendev/node-RESTlike/issues"
 	},
 	"main": "server.js",
 	"dependencies": {
