@@ -12,12 +12,13 @@ Requirements
 * grunt
 * grunt-cli
 
-node.js and mongodb should be in your PATH variable
+Node.js and mongodb should be in your PATH variable.
+To install grunt and grunt-cli just type in a terminal `npm install grunt-cli -g`
 
 Installation
 ------------
 
-Open a cli in your node-RESTlike project folder and type in npm install.
+Open a cli in your node-RESTlike project folder and type in `npm install`.
 Npm should download all neccessary node modules.
 
 Development
