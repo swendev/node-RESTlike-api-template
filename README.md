@@ -25,6 +25,7 @@ Development
 -----------
 
 There are 4 grunt tasks:
+
 1. 1-db (starts your mongodb with path ./data/db)
 2. 2-server (starts the node-RESTlike server.js with nodemon and lints all js files on change)
 3. all (combines 1-db, 2-server)
