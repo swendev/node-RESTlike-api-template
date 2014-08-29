@@ -1,0 +1,19 @@
+{
+	"name": "node RESTlike",
+	"version": "0.1.0",
+	"description": "node RESTful template",
+	"author": "Swen Gorschewski <swen@pixelforyou.de>",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/swendev/mean-stack"
+	},
+	"bugs": {
+		"url": "https://github.com/swendev/mean-stack/issues"
+	},
+	"main": "server.js",
+	"dependencies": {
+		"express": "~4.8.x",
+		"mongoose": "~3.8.x",
+		"body-parser": "~1.6.x"
+	}
+}
